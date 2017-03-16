@@ -20,7 +20,7 @@ RUN	pip install sphinx \
 				sphinxcontrib-plantuml
 
 RUN apt-get update && \
-	apt-get install -y openjdk-8-jre && \
+	apt-get install -y openjdk-7-jre && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
 	wget -P $JAVA_HOME/jre/lib/ext https://sourceforge.net/projects/plantuml/files/plantuml.jar/download 
