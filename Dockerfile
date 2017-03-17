@@ -2,10 +2,7 @@ FROM python:3-alpine
 MAINTAINER Krennic
 
 #Install texlive-full in one layer
-RUN apk update && \
-    apk install -y make git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng && \
-    apk clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk add make git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng
 
 RUN pip install sphinx \
     recommonmark \
