@@ -1,9 +1,9 @@
-FROM python:3
+FROM python:3-alpine
 MAINTAINER Krennic
 
 #Install texlive-full in one layer
 RUN apt-get update && \
-    apt-get install -y git xzdec texlive-full openjdk-7-jre graphviz && \
+    apt-get install -y git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
