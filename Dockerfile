@@ -1,8 +1,11 @@
-FROM python:3-alpine
+FROM python:3-slim
 MAINTAINER Krennic
 
 #Install texlive-full in one layer
-RUN apk add make git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng
+RUN apt-get update && \
+    apt-get install -y make mercurial git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN pip install sphinx \
     recommonmark \
