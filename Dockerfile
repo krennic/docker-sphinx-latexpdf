@@ -10,6 +10,7 @@ RUN apt-get update && \
     	git \
     	xzdec \
     	texlive-latex-extra \
+        texlive-lang-french \
     	openjdk-7-jre \
     	graphviz \
     	dvipng \
