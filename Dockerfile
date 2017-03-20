@@ -3,8 +3,17 @@ MAINTAINER Krennic
 
 #Install texlive-full in one layer
 RUN apt-get update && \
-    apt-get install -y make mercurial git xzdec texlive-latex-extra openjdk-7-jre graphviz dvipng && \
-    apt-get clean && \
+    apt-get install -y \
+    	make\
+    	wget \
+    	mercurial \
+    	git \
+    	xzdec \
+    	texlive-latex-extra \
+    	openjdk-7-jre \
+    	graphviz \
+    	dvipng \
+    && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install sphinx \
