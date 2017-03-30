@@ -29,6 +29,6 @@ RUN wget -P /plant https://sourceforge.net/projects/plantuml/files/plantuml.jar/
 
 WORKDIR /usr/local/lib/python3.6/site-packages
 
-RUN hg clone sphinx-docxbuilder
+RUN hg clone https://bitbucket.org/haraisao/sphinx-docxbuilder
 
 WORKDIR /workspace
