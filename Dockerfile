@@ -27,4 +27,8 @@ RUN pip install sphinx \
 RUN wget -P /plant https://sourceforge.net/projects/plantuml/files/plantuml.jar/download && \
     mv /plant/download /plant/plantUML.jar
 
+WORKDIR /usr/local/lib/python3.6/site-packages
+
+RUN hg clone sphinx-docxbuilder
+
 WORKDIR /workspace
