@@ -22,7 +22,8 @@ RUN pip install sphinx \
     sphinx-autobuild \
     sphinx_bootstrap_theme \
     sphinx_rtd_theme \
-    sphinxcontrib-plantuml
+    sphinxcontrib-plantuml \
+    lxml
 
 RUN wget -P /plant https://sourceforge.net/projects/plantuml/files/plantuml.jar/download && \
     mv /plant/download /plant/plantUML.jar
