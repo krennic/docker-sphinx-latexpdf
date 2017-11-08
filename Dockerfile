@@ -1,6 +1,8 @@
 FROM python:3-slim
 MAINTAINER Krennic
 
+RUN mkdir -p /usr/share/man/man1
+
 #Install texlive-full in one layer
 RUN apt-get update && \
     apt-get install -y \
