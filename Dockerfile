@@ -16,6 +16,7 @@ RUN apt-get update && \
     	openjdk-7-jre \
     	graphviz \
     	dvipng \
+    	latexmk \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
