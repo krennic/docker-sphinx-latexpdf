@@ -17,6 +17,7 @@ RUN apt-get update && \
     	graphviz \
     	dvipng \
     	latexmk \
+    	wkhtmltopdf \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
