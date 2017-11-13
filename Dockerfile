@@ -18,6 +18,8 @@ RUN apt-get update && \
     	dvipng \
     	latexmk \
     	wkhtmltopdf \
+    	xauth \
+    	xvfb \        
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
